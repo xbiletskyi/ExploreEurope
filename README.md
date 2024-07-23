@@ -1,4 +1,6 @@
-# Chained trip temporary Front-end
-This is the first *wrapper* version for using the backend service.  
-It works only on localhost so everyone is legally allowed to remember a meme about 'check out my website, here is url: localhost:63343/index.html'.   
-#### Will be rewritten as soon as possible
+# Explore Europe front-end
+Simple website to look for cheap trips around the Europe with flights. Contains only three pages:
+- Search - enter the parameters for search
+- Loading - simple loading bar while back-end is doing its magic 
+- Result - table containing all found trips with an ability to sort out by any parameter 
+### **Currently on development stage**

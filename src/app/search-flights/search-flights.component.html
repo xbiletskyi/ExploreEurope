@@ -1,0 +1,33 @@
+<h1>Search Flights</h1>
+<form #flightForm="ngForm" (ngSubmit)="onSearch()" (input)="validateForm()">
+  <label for="origin">Origin: </label>
+  <input type="text" id="origin" name="origin" [(ngModel)]="flightDetails.origin" required>
+
+  <label for="destination">Destination: </label>
+  <input type="text" id="destination" name="destination" [(ngModel)]="flightDetails.destination">
+
+  <label for="departureAt">Departure At: </label>
+  <input type="date" id="departureAt" name="departureAt" [(ngModel)]="flightDetails.departureAt" required>
+
+  <label for="returnBefore">Return Before: </label>
+  <input type="date" id="returnBefore" name="returnBefore" [(ngModel)]="flightDetails.returnBefore">
+
+  <label for="budget">Budget: </label>
+  <input type="number" id="budget" name="budget" [(ngModel)]="flightDetails.budget" required>
+
+  <label for="minStay">Min Stay: </label>
+  <input type="number" id="minStay" name="minStay" [(ngModel)]="flightDetails.minStay">
+
+  <label for="maxStay">Max Stay: </label>
+  <input type="number" id="maxStay" name="maxStay" [(ngModel)]="flightDetails.maxStay">
+
+  <label for="schengenOnly">
+    <input type="checkbox" id="schengenOnly" name="schengenOnly" [(ngModel)]="flightDetails.schengenOnly">
+    Schengen Only
+  </label>
+
+  <label for="timeLimitSeconds">Time Limit (seconds): </label>
+  <input type="number" id="timeLimitSeconds" name="timeLimitSeconds" [(ngModel)]="flightDetails.timeLimitSeconds">
+
+  <button type="submit" [class.invalid]="!allValid" [class.valid]="allValid">Search</button>
+</form>
